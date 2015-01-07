@@ -36,7 +36,7 @@ io.sockets.on('connection', function(socket) {
 
   socket.on('sendchat', function(data) {
 
-    io.sockets.in(socket.room).emit('updfgdatechat', socket.username, data);
+    io.sockets.in(socket.room).emit('updatechat', socket.username, data);
   });
 
   socket.on('switchRoom', function(newroom) {
